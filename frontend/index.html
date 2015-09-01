@@ -4,10 +4,10 @@
 
 	<head>
 	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	</head>
 
 	<body >
@@ -33,12 +33,22 @@
       		</div>
  		</div>
 
-		
-		<div style="width:25% ; display: block ; margin-left: auto ; margin-right: auto" class="form-group">
+	
+
+ 		<div style="margin-top: 30px; width:25% ; display: block ; margin-left: auto ; margin-right: auto" class="form-group">
+	  	<label for="usr">Id-ul intrebarii</label>
+	 	<input id="questionId" type="numeric" value="1" class="form-control" id="usr">
+		</div>
+
+		<div style="margin-top: 30px; width:25% ; display: block ; margin-left: auto ; margin-right: auto" class="form-group">
 	  		<label for="usr">Numele tau complet</label>
 	  		<input id="fullName" type="text" class="form-control" id="usr">
 		</div>
 
+		<div style="width:25% ; display: block ; margin-left: auto ; margin-right: auto" class="form-group">
+	  		<label for="usr">Raspunsul tau</label>
+	  		<input id="answer" type="text" class="form-control" id="usr">
+		</div>
 		
 		<div>
 			<button id="send" style="display: block ; margin-left: auto ; margin-right: auto" type="button" class="btn btn-primary">Trimite!</button>
@@ -48,7 +58,12 @@
 
 				$('#send').click(function(){
 					 fullName=$('#fullName').val();
-					 
+					 answer=$('#answer').val();
+					 questionId=$('#questionId').val();
+					 $('#questionId').val(parseInt(questionId,10)+1);
+					 $('#answer').val("");
+					 console.log(fullName+" "+answer);
+
 					 
 				});
 			</script>
