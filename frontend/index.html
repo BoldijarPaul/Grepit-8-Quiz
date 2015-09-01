@@ -13,7 +13,7 @@
 	<body >
 		<script src="scripts/jquery-1.11.3.min.js"></script>
 		<script src="scripts/bootstrap.min.js"></script>
-		
+		<script src="scripts/apihelper.js"></script>
 
 		<div id="top_header_small">
 		</div>
@@ -60,9 +60,12 @@
 					 fullName=$('#fullName').val();
 					 answer=$('#answer').val();
 					 questionId=$('#questionId').val();
+
+					 addAnswer(questionId,answer,fullName);
+
 					 $('#questionId').val(parseInt(questionId,10)+1);
 					 $('#answer').val("");
-					 console.log(fullName+" "+answer);
+					 
 
 					 
 				});

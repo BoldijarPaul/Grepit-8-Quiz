@@ -1,7 +1,7 @@
 var home="http://localhost:8080/api";
 function addAnswer(questionId,answer,fullName){
    	$.ajax({
-        url : home+"/answer/"+questionId+"?fullName"+fullName+"&answer="+answer,
+        url : home+"/answer/"+questionId+"?fullName="+fullName+"&answer="+answer,
         type: "GET",
         success : handleData,
         error: handleError
