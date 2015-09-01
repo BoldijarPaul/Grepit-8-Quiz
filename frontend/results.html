@@ -47,19 +47,18 @@
 				 
 
 				$('#send').click(function(){
-					 fullName=$('#fullName').val();
-					 answer=$('#answer').val();
 					 questionId=$('#questionId').val();
-
-					 addAnswer(questionId,answer,fullName);
-
-					 $('#questionId').val(parseInt(questionId,10)+1);
-					 $('#answer').val("");
+					 getQuestionAnswers(questionId);
+					
 					 
 
 					 
 				});
 			</script>
+		</div>
+
+		<div id="answers">
+
 		</div>
 
 	</body>
